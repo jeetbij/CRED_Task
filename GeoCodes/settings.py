@@ -20,9 +20,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ['SECRET_KEY']
+SECRET_KEY = os.environ.get('SECRET_KEY', 'secret_key')
 
-API_KEY = os.environ['API_KEY']
+API_KEY = os.environ.get('API_KEY', '')
 GOOGLE_MAP_API = 'https://maps.googleapis.com/maps/api/geocode/json?address={}&key={}'
 CACHE_TIME = 7*86400
 
