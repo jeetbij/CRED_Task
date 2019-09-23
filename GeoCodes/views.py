@@ -20,12 +20,12 @@ class GeoCodeView(APIView):
 			if not coords:
 				response = requests.get(url=settings.GOOGLE_MAP_API.format(address, settings.API_KEY))
 				response = response.json()
-				print(response)
+				# print(response)
 				coords = response['results'][0]['geometry']['location']
 				cache.set(cached_address.lower(), coords, settings.CACHE_TIME)
 				print('map api called.')
 		except Exception as e:
-			print(e)
+			# print(e)
 			return Response({
 				"error": "Google Api is not responding or it is taking too much time."
 				})
