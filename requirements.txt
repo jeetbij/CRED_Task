@@ -2,7 +2,7 @@ certifi==2019.6.16
 chardet==3.0.4
 Django==2.2.5
 django-cors-headers==3.1.0
-djangorestframework==3.10.3
+djangorestframework==3.11.2
 idna==2.8
 python-memcached==1.59
 pytz==2019.2
